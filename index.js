@@ -1,8 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const dotenv=require('dotenv').config();
 const { MongoClient, ObjectId } = require("mongodb");
-const URL = "mongodb://localhost:27017";
+const URL = process.env.DB;
 
 app.use(express.json());
 app.use(
